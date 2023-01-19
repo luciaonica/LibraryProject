@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="513.0" stylesheets="@../styles/common.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.controller.LoginController">
+   <children>
+      <Label fx:id="titleLabel" alignment="CENTER" layoutX="230.0" layoutY="14.0" prefHeight="68.0" prefWidth="572.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Library Login" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="87.0" layoutY="94.0" prefHeight="40.0" prefWidth="339.0" promptText="Username" />
+      <PasswordField fx:id="passwordField" layoutX="87.0" layoutY="167.0" onAction="#handleLoginButtonAction" prefHeight="40.0" prefWidth="339.0" promptText="Password" />
+      <Button layoutX="115.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="47.0" prefWidth="121.0" text="Login" />
+      <Button layoutX="273.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="47.0" prefWidth="121.0" text="Cancel" />
+   </children>
+</AnchorPane>
