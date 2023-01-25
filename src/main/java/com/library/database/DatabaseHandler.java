@@ -19,6 +19,9 @@ import com.library.controller.ListMemberController.Member;
 public final class DatabaseHandler {
 	private static DatabaseHandler handler = null;
 
+	private static final String DB_URL = "jdbc:mysql://localhost:3306/my_library";
+	private static final String DB_USERNAME = "root";
+	private static final String DB_PASSWORD = "password";
 	private static Connection conn = null;
 	private static Statement stmt = null;
 
@@ -38,7 +41,7 @@ public final class DatabaseHandler {
 
 	private void createConnection() {
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_library", "root", "password");
+			conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
 		} catch (SQLException e) {
 			JOptionPane.showMessageDialog(null, "Could not load database", "Database Error", JOptionPane.ERROR_MESSAGE);
 			System.exit(0);
